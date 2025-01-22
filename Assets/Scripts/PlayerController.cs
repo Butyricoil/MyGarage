@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
 
+            // Поворот игрока в сторону движения
             Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
             rb.rotation = Quaternion.Lerp(rb.rotation, toRotation, Time.fixedDeltaTime * 10f);
         }
