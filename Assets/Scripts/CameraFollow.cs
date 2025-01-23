@@ -2,14 +2,14 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target; // Цель (персонаж)
-    public Vector3 offset; // Смещение камеры
-    public float smoothSpeed = 0.125f; // Скорость сглаживания
+    public Transform target;
+    public Vector3 offset;
+    public float smoothSpeed = 0.125f;
 
-    private float pitch = 2f; // Угол наклона камеры
-    private float yaw = 0f; // Угол поворота камеры
+    private float pitch = 2f;
+    private float yaw = 0f;
 
-    public float rotationSpeed = 5f; // Скорость вращения камеры
+    public float rotationSpeed = 5f;
 
     void LateUpdate()
     {

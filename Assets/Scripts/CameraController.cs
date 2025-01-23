@@ -3,11 +3,11 @@ using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
-    public RectTransform touchPanel; // Панель для отслеживания касаний
-    public float rotationSpeed = 0.2f; // Скорость вращения камеры
+    public RectTransform touchPanel;
+    public float rotationSpeed = 0.2f;
 
-    private Vector2 lastTouchPosition; // Последняя позиция касания
-    private bool isTouching = false;   // Проверка, активен ли ввод
+    private Vector2 lastTouchPosition;
+    private bool isTouching = false;
 
     void Update()
     {
@@ -15,8 +15,7 @@ public class CameraController : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            // Проверяем, находится ли касание в области панели
-            if (IsTouchWithinPanel(touch.position))
+             if (IsTouchWithinPanel(touch.position))
             {
                 if (touch.phase == TouchPhase.Began)
                 {
@@ -27,23 +26,19 @@ public class CameraController : MonoBehaviour
                 {
                     Vector2 deltaPosition = touch.deltaPosition;
 
-                    // Получаем текущий угол вращения по оси Y
-                    float currentRotationY = transform.eulerAngles.y;
+                     float currentRotationY = transform.eulerAngles.y;
 
-                    // Инвертируем поворот по оси X, если камера смотрит на заднюю часть (более 180 градусов)
-                    if (currentRotationY > 90f && currentRotationY < 270f)
+                     if (currentRotationY > 90f && currentRotationY < 270f)
                     {
-                        deltaPosition.y = -deltaPosition.y; // Инвертируем поворот по оси X
+                        deltaPosition.y = -deltaPosition.y;
                     }
 
-                    // Поворачиваем камеру
-                    float rotationX = (deltaPosition.y * rotationSpeed);
+                     float rotationX = (deltaPosition.y * rotationSpeed);
                     float rotationY = (deltaPosition.x * rotationSpeed);
 
                     transform.Rotate(-rotationX, rotationY, 0, Space.World);
 
-                    // Ограничиваем вращение камеры
-                    Vector3 currentRotation = transform.eulerAngles;
+                     Vector3 currentRotation = transform.eulerAngles;
                     currentRotation.z = 0;
                     transform.eulerAngles = currentRotation;
                 }
@@ -55,14 +50,14 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    // Проверка, находится ли касание в области панели
+
     private bool IsTouchWithinPanel(Vector2 touchPosition)
     {
         Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             touchPanel,
             touchPosition,
-            null, // Камера, используется null для экрана Canvas
+            null,
             out localPoint
         );
         return touchPanel.rect.Contains(localPoint);

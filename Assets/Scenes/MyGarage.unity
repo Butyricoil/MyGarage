@@ -221,7 +221,6 @@ GameObject:
   - component: {fileID: 295082156}
   - component: {fileID: 295082155}
   - component: {fileID: 295082161}
-  - component: {fileID: 295082160}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -338,24 +337,13 @@ Transform:
   m_GameObject: {fileID: 295082154}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.551, y: 4.684, z: -0.225}
+  m_LocalPosition: {x: 7.551, y: 4.03, z: -0.225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1640690330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &295082160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295082154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac12db7037b93d4cacf493c87aae0a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &295082161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 272817936}
   moveSpeed: 5
+  playerCamera: {fileID: 1640690329}
 --- !u!1001 &439330228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1153,12 +1142,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640690326}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.551, y: 5.984, z: -0.225}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 295082159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1640690331
 MonoBehaviour:
@@ -1448,7 +1437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1580,7 +1569,6 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1640690330}
   - {fileID: 295082159}
   - {fileID: 757350404}
   - {fileID: 1590863942}

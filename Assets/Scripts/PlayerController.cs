@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
     public float moveSpeed = 5f;
+    public Camera playerCamera;
 
     private Rigidbody rb;
 
@@ -17,7 +18,16 @@ public class PlayerController : MonoBehaviour
         float horizontal = joystick.Horizontal;
         float vertical = joystick.Vertical;
 
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+         Vector3 forward = playerCamera.transform.forward;
+        Vector3 right = playerCamera.transform.right;
+
+         forward.y = 0f;
+        right.y = 0f;
+
+         forward.Normalize();
+        right.Normalize();
+
+         Vector3 direction = forward * vertical + right * horizontal;
 
         if (direction.magnitude >= 0.1f)
         {
