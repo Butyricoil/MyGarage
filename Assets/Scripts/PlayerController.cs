@@ -22,10 +22,6 @@ public class PlayerController : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
-
-            // Поворот игрока в сторону движения
-            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-            rb.rotation = Quaternion.Lerp(rb.rotation, toRotation, Time.fixedDeltaTime * 10f);
         }
     }
 }
