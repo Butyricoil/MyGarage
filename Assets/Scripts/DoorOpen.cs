@@ -11,16 +11,11 @@ public class DoorOpen : MonoBehaviour
         if (anim == null)
         {
             Debug.LogError("Animator not found on door object");
+            return;
         }
 
-        if (anim != null)
-        {
-            anim.SetBool("isOpen", true); // Дверь открывается при запуске игры
-            Debug.Log("Door animation started");
-        }
-        else
-        {
-            Debug.LogError("Animator not found on door object");
-        }
+        // Запускаем анимацию открытия двери
+        anim.SetBool("isOpen", true);
+        Debug.Log("Door animation started");
     }
 }

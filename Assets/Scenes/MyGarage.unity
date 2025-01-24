@@ -498,11 +498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a138708a42656df4d811e787ab1bda1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 272817936}
-  moveSpeed: 5
-  playerCamera: {fileID: 1640690329}
-  Take: 0
-  rb: {fileID: 0}
 --- !u!114 &295082162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,23 +1152,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8815717225679372840, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
   m_PrefabInstance: {fileID: 1707598418}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &999311674
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999311669}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: a475cab6519ae284ca94a94152dfdd9b, type: 2}
-  - {fileID: 7400000, guid: 5ee4f0a8063445c41bf8ecf6a7428e0d, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &999311678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,7 +1174,7 @@ Animator:
   m_GameObject: {fileID: 999311669}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3bb0c2a56844e094392610fecf7cf869, type: 2}
+  m_Controller: {fileID: 9100000, guid: c208950753b2c0c4e88b50a95fa7eaa1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2112,6 +2090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 91.523
       objectReference: {fileID: 0}
+    - target: {fileID: 5016612148341632710, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6004261115246251489, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9999992
@@ -2177,16 +2159,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6029310107806678625, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1791656845}
-    - targetCorrespondingSourceObject: {fileID: 6029310107806678625, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1791656849}
     - targetCorrespondingSourceObject: {fileID: 6029310107806678625, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1791656850}
-    - targetCorrespondingSourceObject: {fileID: 1500866394137646617, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 999311674}
     - targetCorrespondingSourceObject: {fileID: 1500866394137646617, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
       insertIndex: -1
       addedObject: {fileID: 999311678}
@@ -2309,23 +2285,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3897842948919877209, guid: 230341fb27694dc438f9afee250a2b49, type: 3}
   m_PrefabInstance: {fileID: 1707598418}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1791656845
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791656840}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 485bbe86cb3f6a64b965ec463cf52b5e, type: 2}
-  - {fileID: 7400000, guid: 582cdc2bea9d96745ac34cbb2d532405, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &1791656849
 MonoBehaviour:
   m_ObjectHideFlags: 0
