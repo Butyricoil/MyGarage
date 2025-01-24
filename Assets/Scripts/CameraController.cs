@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class CameraController : MonoBehaviour
 {
     public RectTransform touchPanel;
+    public bool Take;
     public float rotationSpeed = 0.2f;
 
     private Vector2 lastTouchPosition;

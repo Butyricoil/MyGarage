@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     public Joystick joystick;
     public float moveSpeed = 5f;
     public Camera playerCamera;
-
+    public bool Take;
     private Rigidbody rb;
 
     void Start()
